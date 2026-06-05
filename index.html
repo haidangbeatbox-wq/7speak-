@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>7Speak | Free English Speaking PDFs & Resources</title>
+  <meta name="title" content="7Speak | Free English Speaking PDFs & Resources">
+  <meta name="description" content="Thư viện tài liệu PDF học tiếng Anh miễn phí chất lượng cao dành cho người tự học IELTS Speaking, TOEIC Speaking và English Conversation. Tải tài liệu nhanh chóng, không quảng cáo.">
+  <meta name="keywords" content="7speak, ielts speaking pdf, toeic speaking pdf, english conversation pdf, tai tai lieu tieng anh mien phi, hoc giao tiep tieng anh">
+  <meta name="author" content="7Speak">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/7speak/">
+  <meta property="og:title" content="7Speak | Free English Speaking PDFs & Resources">
+  <meta property="og:description" content="Tải tài liệu PDF học tiếng Anh IELTS, TOEIC, giao tiếp miễn phí chỉ với một cú nhấp chuột. Tốc độ tải cực nhanh, giao diện tối giản hiện đại.">
+  <meta property="og:image" content="assets/covers/ielts.svg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="7Speak | Free English Speaking PDFs & Resources">
+  <meta property="twitter:description" content="Tải tài liệu PDF học tiếng Anh IELTS, TOEIC, giao tiếp miễn phí chỉ với một cú nhấp chuột. Tốc độ tải cực nhanh, giao diện tối giản hiện đại.">
+  <meta property="twitter:image" content="assets/covers/ielts.svg">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://github.com/7speak/">
+
+  <!-- Stylesheet & Script -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- 1. HEADER SECTION -->
+  <header>
+    <div class="nav-container">
+      <!-- Logo Branding -->
+      <a href="#home" class="logo" id="logoClick">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" class="logo-svg" aria-label="7Speak Logo">
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3B82F6" />
+              <stop offset="100%" stop-color="#06B6D4" />
+            </linearGradient>
+            <filter id="logo-glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <g transform="translate(5, 5)">
+            <path d="M 5 5 L 35 5 L 20 40 L 12 40 L 23 13 L 5 13 Z" fill="url(#logo-grad)" filter="url(#logo-glow)"/>
+            <text x="42" y="32" class="logo-text">Speak</text>
+          </g>
+        </svg>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#pdfs" class="nav-link">PDFs</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions (Theme Toggle & Hamburger Toggle) -->
+      <div class="nav-actions">
+        <!-- Dual Mode Toggle Button -->
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme">
+          <!-- Moon Icon (Dark Mode View) -->
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path d="M12 3a9 9 0 1 0 9 9 9.75 9.75 0 0 0-.67-3.4 6.75 6.75 0 0 1-7.93-7.93A9.75 9.75 0 0 0 12 3Z"/>
+          </svg>
+          <!-- Sun Icon (Light Mode View) -->
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <path d="M12 18a6 6 0 1 1 6-6 6 6 0 0 1-6 6Zm0-1.5a4.5 4.5 0 1 0-4.5-4.5 4.5 4.5 0 0 0 4.5 4.5ZM12 1.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V2.25A.75.75 0 0 1 12 1.5ZM12 19.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM4.57 4.57a.75.75 0 0 1 1.06 0l1.06 1.06a.75.75 0 1 1-1.06 1.06L4.57 5.63a.75.75 0 0 1 0-1.06ZM17.31 17.31a.75.75 0 0 1 1.06 0l1.06 1.06a.75.75 0 1 1-1.06 1.06l-1.06-1.06a.75.75 0 0 1 0-1.06ZM1.5 12a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5H2.25A.75.75 0 0 1 1.5 12ZM19.5 12a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM5.63 19.43a.75.75 0 0 1 0-1.06l1.06-1.06a.75.75 0 1 1 1.06 1.06l-1.06 1.06a.75.75 0 0 1-1.06 0ZM18.37 5.63a.75.75 0 0 1 0-1.06l1.06-1.06a.75.75 0 1 1 1.06 1.06l-1.06 1.06a.75.75 0 0 1-1.06 0Z"/>
+          </svg>
+        </button>
+
+        <!-- Mobile Drawer Toggler -->
+        <button id="mobileToggle" class="mobile-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-glow-blob-1"></div>
+    <div class="hero-glow-blob-2"></div>
+    <div class="hero-content reveal">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        Free English Speaking PDFs &amp; Resources
+      </div>
+      <h1 class="hero-title">Improve Your English <br><span class="gradient-text">Speaking Every Day</span></h1>
+      <p class="hero-desc">Download premium, structured PDF resources for IELTS Speaking, TOEIC Speaking and Daily English Conversations. Start practicing today for free!</p>
+      <div class="hero-cta">
+        <a href="#pdfs" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />
+          </svg>
+          Explore PDFs
+        </a>
+        <a href="https://www.tiktok.com/@7chamieltsthidoiten" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <!-- TikTok SVG Path -->
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.89-.6-4.09-1.47-.76-.57-1.39-1.3-1.9-2.12-.08-.01-.06-.04-.08-.07v7.5c.09 2.63-1.14 5.25-3.34 6.74-2.13 1.48-4.99 1.75-7.39.75-2.61-1.07-4.48-3.79-4.52-6.66-.12-3.17 1.97-6.22 5.04-7.05 1.79-.51 3.75-.24 5.37.66.02-1.38.01-2.76.01-4.14-1.57-.45-3.23-.28-4.66.47-2.28 1.15-3.74 3.63-3.69 6.2.03 2.13 1.09 4.19 2.87 5.38 1.91 1.29 4.54 1.49 6.6.49 1.71-.8 2.88-2.52 2.92-4.42V.02z"/>
+          </svg>
+          Visit TikTok
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SEARCH SECTION -->
+  <section class="search-section">
+    <div class="search-wrapper reveal">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input type="text" id="searchInput" class="search-input" placeholder="Tìm tài liệu theo tên hoặc danh mục..." aria-label="Search documents">
+    </div>
+  </section>
+
+  <!-- 4. CATEGORIES SECTION -->
+  <section class="section-container" id="categories">
+    <div class="section-header reveal">
+      <span class="section-subtitle">Chủ đề học tập</span>
+      <h2 class="section-title">Explore Categories</h2>
+    </div>
+    
+    <div class="categories-grid reveal">
+      <!-- Card: All Categories -->
+      <div class="category-card active" data-category="all">
+        <div class="category-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+          </svg>
+        </div>
+        <span class="category-title">All Resources</span>
+      </div>
+
+      <!-- Card: IELTS Part 1 -->
+      <div class="category-card" data-category="part1">
+        <div class="category-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+        </div>
+        <span class="category-title">IELTS Part 1</span>
+      </div>
+
+      <!-- Card: IELTS Part 2 -->
+      <div class="category-card" data-category="part2">
+        <div class="category-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+          </svg>
+        </div>
+        <span class="category-title">IELTS Part 2</span>
+      </div>
+
+      <!-- Card: IELTS Part 3 -->
+      <div class="category-card" data-category="part3">
+        <div class="category-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </div>
+        <span class="category-title">IELTS Part 3</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PDF LIBRARY SECTION -->
+  <section class="section-container" id="pdfs">
+    <div class="library-header reveal">
+      <div>
+        <span class="section-subtitle">Thư viện tài liệu</span>
+        <h2 class="section-title">Free PDF Library</h2>
+      </div>
+      <div class="library-count">
+        Showing <span id="docCount">0</span> of <span id="totalCount">0</span> resources
+      </div>
+    </div>
+
+    <!-- PDF Cards Grid (Dynamic JS injection target) -->
+    <div class="library-grid" id="libraryGrid">
+      <!-- Content populated dynamically via script.js -->
+    </div>
+  </section>
+
+  <!-- 6. ABOUT SECTION -->
+  <section class="about section-container" id="about">
+    <div class="about-layout">
+      <!-- Visual Graphic Stack -->
+      <div class="about-graphics reveal">
+        <div class="glass-card-accent"></div>
+        <div class="glass-card">
+          <h3 class="gradient-text" style="font-family: var(--font-heading); font-weight: 800;">7Speak Resource</h3>
+          <p style="font-size: 0.85rem; opacity: 0.8; margin-top: 1rem; line-height: 1.5;">Học tiếng Anh thông minh với tài liệu cô đọng, bám sát đề thi thực tế và hội thoại đời thường.</p>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+            <span style="font-size: 0.8rem; font-weight: 700;">VERIFIED CONTENT</span>
+            <span style="font-size: 0.75rem; padding: 0.2rem 0.6rem; background: rgba(59, 130, 246, 0.2); border-radius: var(--radius-full);">PDF 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Information Details -->
+      <div class="about-info reveal">
+        <span class="about-tag">Về chúng tôi</span>
+        <h2 class="about-title">English Resources Without Limits</h2>
+        <p class="about-desc">7Speak là thư viện tài liệu tiếng Anh miễn phí dành cho người học giao tiếp, IELTS và TOEIC. Được thiết kế tối giản, trực quan và tối ưu tốc độ để bạn tiếp cận tri thức nhanh nhất.</p>
+        
+        <!-- Features checklist grid -->
+        <div class="about-features">
+          <div class="about-feature-item">
+            <svg class="feature-tick" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <h4 class="feature-title">100% Free</h4>
+              <p class="feature-desc">Tất cả tài liệu đều miễn phí và có thể tải trực tiếp không giới hạn.</p>
+            </div>
+          </div>
+
+          <div class="about-feature-item">
+            <svg class="feature-tick" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <h4 class="feature-title">High Quality</h4>
+              <p class="feature-desc">Nội dung biên soạn kỹ lưỡng, thực tế, bám sát các kỳ thi lớn.</p>
+            </div>
+          </div>
+
+          <div class="about-feature-item">
+            <svg class="feature-tick" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <h4 class="feature-title">Ultra Fast</h4>
+              <p class="feature-desc">Website tối giản, tải trang siêu tốc trên mọi thiết bị di động.</p>
+            </div>
+          </div>
+
+          <div class="about-feature-item">
+            <svg class="feature-tick" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+            <div>
+              <h4 class="feature-title">Direct Links</h4>
+              <p class="feature-desc">Đường dẫn xem trực tiếp hoặc tải ngay, nói không với quảng cáo rác.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CONTACT & CHANNELS SECTION -->
+  <section class="section-container" id="contact">
+    <div class="contact-layout">
+      <!-- Contact details & links -->
+      <div class="contact-info reveal">
+        <span class="section-subtitle">Liên kết &amp; Phản hồi</span>
+        <h2 class="section-title" style="margin-bottom: 1.5rem;">Get In Touch</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Kết nối với kênh TikTok của tôi để xem video bài học ngắn mỗi ngày, hoặc gửi tin nhắn đóng góp ý kiến để chúng tôi phát triển thêm nhiều tài liệu bổ ích.</p>
+        
+        <div class="contact-channels">
+          <!-- TikTok Link -->
+          <a href="https://www.tiktok.com/@7chamieltsthidoiten" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.89-.6-4.09-1.47-.76-.57-1.39-1.3-1.9-2.12-.08-.01-.06-.04-.08-.07v7.5c.09 2.63-1.14 5.25-3.34 6.74-2.13 1.48-4.99 1.75-7.39.75-2.61-1.07-4.48-3.79-4.52-6.66-.12-3.17 1.97-6.22 5.04-7.05 1.79-.51 3.75-.24 5.37.66.02-1.38.01-2.76.01-4.14-1.57-.45-3.23-.28-4.66.47-2.28 1.15-3.74 3.63-3.69 6.2.03 2.13 1.09 4.19 2.87 5.38 1.91 1.29 4.54 1.49 6.6.49 1.71-.8 2.88-2.52 2.92-4.42V.02z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-card-label">Kênh TikTok</div>
+              <div class="contact-card-value">@7chamieltsthidoiten</div>
+            </div>
+          </a>
+
+          <!-- Email Support -->
+          <a href="mailto:support@7speak.vn" class="contact-card">
+            <div class="contact-card-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-card-label">Hỗ trợ &amp; Hợp tác</div>
+              <div class="contact-card-value">support@7speak.vn</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Feedback Form -->
+      <div class="contact-form-container reveal">
+        <form class="contact-form" id="contactForm">
+          <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem; font-size: 1.35rem;">Request a PDF Resource</h3>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Bạn đang cần tài liệu gì khác? Hãy gửi yêu cầu cho chúng tôi!</p>
+          
+          <div class="form-group">
+            <label for="formName">Full Name</label>
+            <input type="text" id="formName" class="form-control" placeholder="Nguyễn Văn A" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="formEmail">Email Address</label>
+            <input type="email" id="formEmail" class="form-control" placeholder="name@domain.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="formMessage">Resource Request details</label>
+            <textarea id="formMessage" class="form-control" placeholder="Mô tả tài liệu bạn muốn chúng tôi tổng hợp thêm..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">
+            Send Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FOOTER SECTION -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-text">7Speak</div>
+        <p class="footer-desc">Thư viện chia sẻ tài liệu học tiếng Anh trực quan và miễn phí dành cho thế hệ người học hiện đại. Tối ưu trải nghiệm tự học, nâng cấp band điểm nhanh chóng.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Links</h4>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#home">Home</a></li>
+          <li class="footer-link"><a href="#pdfs">PDF Library</a></li>
+          <li class="footer-link"><a href="#categories">Categories</a></li>
+          <li class="footer-link"><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Categories</h4>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#categories">IELTS Speaking</a></li>
+          <li class="footer-link"><a href="#categories">TOEIC Speaking</a></li>
+          <li class="footer-link"><a href="#categories">English Conversation</a></li>
+          <li class="footer-link"><a href="#categories">Vocabulary Builder</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        &copy; 2026 7Speak. All Rights Reserved. Built with ❤️ for English Learners.
+      </div>
+      
+      <!-- Social Buttons -->
+      <div class="footer-socials">
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@7chamieltsthidoiten" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.89-.6-4.09-1.47-.76-.57-1.39-1.3-1.9-2.12-.08-.01-.06-.04-.08-.07v7.5c.09 2.63-1.14 5.25-3.34 6.74-2.13 1.48-4.99 1.75-7.39.75-2.61-1.07-4.48-3.79-4.52-6.66-.12-3.17 1.97-6.22 5.04-7.05 1.79-.51 3.75-.24 5.37.66.02-1.38.01-2.76.01-4.14-1.57-.45-3.23-.28-4.66.47-2.28 1.15-3.74 3.63-3.69 6.2.03 2.13 1.09 4.19 2.87 5.38 1.91 1.29 4.54 1.49 6.6.49 1.71-.8 2.88-2.52 2.92-4.42V.02z"/>
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://facebook.com/7speak" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9 8H7v3h2v9h4v-9h3.6l.4-3H13V6c0-.5.5-1 1-1h2V1h-3a5 5 0 0 0-5 5v2z"/>
+          </svg>
+        </a>
+        <!-- Email -->
+        <a href="mailto:support@7speak.vn" class="footer-social-btn" aria-label="Email support">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTop" class="back-to-top" aria-label="Scroll to top of page">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+    </svg>
+  </button>
+
+</body>
+</html>
