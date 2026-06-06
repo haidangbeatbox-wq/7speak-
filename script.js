@@ -161,6 +161,39 @@ const PDF_CATALOG = [
     pdfUrl: "pdf/part 2 speaking FUNNY PICTURE .pdf",
     pages: 15,
     downloads: 2110
+  },
+  {
+    id: 15,
+    title: "IELTS Speaking Part 1: Mirrors",
+    description: "Learn vocabulary, common Q&As, and response strategies for IELTS Speaking Part 1 questions on mirrors and self-reflection.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – MIRRORS.pdf",
+    pages: 15,
+    downloads: 780
+  },
+  {
+    id: 16,
+    title: "IELTS Speaking Part 1: Public Gardens & Parks",
+    description: "Useful vocabulary, collocations, and high-scoring answers to speak naturally about visiting public parks and gardens.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – PUBLIC GARDENS AND PARKS.pdf",
+    pages: 15,
+    downloads: 690
+  },
+  {
+    id: 17,
+    title: "IELTS Speaking Part 1: Websites & Internet Habits",
+    description: "Comprehensive vocabulary guide and model responses to talk about your favorite websites, internet usage, and online study tools.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – WEBSITES.pdf",
+    pages: 15,
+    downloads: 820
   }
 ];
 
