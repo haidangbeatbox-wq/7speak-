@@ -194,6 +194,127 @@ const PDF_CATALOG = [
     pdfUrl: "pdf/IELTS SPEAKING PART 1 – WEBSITES.pdf",
     pages: 15,
     downloads: 820
+  },
+  {
+    id: 18,
+    title: "IELTS Speaking Part 1: Cars & Driving",
+    description: "Learn vocabulary, phrasal verbs, and sample responses to talk about cars, public transport, and driving habits.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – CARS.pdf",
+    pages: 12,
+    downloads: 890
+  },
+  {
+    id: 19,
+    title: "IELTS Speaking Part 1: Clothing & Fashion",
+    description: "A complete guide to discussing fashion trends, daily clothing preferences, and shopping habits with native structures.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – CLOTHING.pdf",
+    pages: 14,
+    downloads: 750
+  },
+  {
+    id: 20,
+    title: "IELTS Speaking Part 1: Coffee & Cafe Culture",
+    description: "Detailed study guide on describing coffee habits, visiting cafes, and socializing over hot beverages.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – COFFEE.pdf",
+    pages: 15,
+    downloads: 940
+  },
+  {
+    id: 21,
+    title: "IELTS Speaking Part 1: Dreams & Future Ambitions",
+    description: "Learn terms and sentence structures to discuss childhood dreams, sleep dreams, and career goals fluently.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – DREAMS & AMBITIONS.pdf",
+    pages: 16,
+    downloads: 820
+  },
+  {
+    id: 22,
+    title: "IELTS Speaking Part 1: Films, Movies & Cinemas",
+    description: "Essential vocabulary for movie genres, talking about going to the cinema, and describing your favorite films.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – FILMS & CINEMAS.pdf",
+    pages: 14,
+    downloads: 1100
+  },
+  {
+    id: 23,
+    title: "IELTS Speaking Part 1: Music Genres & Instruments",
+    description: "Enhance your responses when talking about musical instruments, local concerts, and how music affects your mood.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – MUSIC.pdf",
+    pages: 12,
+    downloads: 950
+  },
+  {
+    id: 24,
+    title: "IELTS Speaking Part 1: Shopping & Consumer Habits",
+    description: "Speak confidently about online shopping, malls, purchasing decisions, and seasonal discounts.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – SHOPPING.pdf",
+    pages: 15,
+    downloads: 830
+  },
+  {
+    id: 25,
+    title: "IELTS Speaking Part 1: Social Media & Networking",
+    description: "A comprehensive guide to talking about Instagram, TikTok, screen time, and virtual connections.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – SOCIAL MEDIA.pdf",
+    pages: 14,
+    downloads: 1200
+  },
+  {
+    id: 26,
+    title: "IELTS Speaking Part 1: Teachers & School Memories",
+    description: "Vocabulary and high-scoring answers to describe your favorite teachers and your school experiences.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – TEACHERS.pdf",
+    pages: 15,
+    downloads: 780
+  },
+  {
+    id: 27,
+    title: "IELTS Speaking Part 1: Tidiness & Organization",
+    description: "Structured templates to discuss keeping your room clean, personal organization habits, and tidiness.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – TIDINESS.pdf",
+    pages: 12,
+    downloads: 670
+  },
+  {
+    id: 28,
+    title: "IELTS Speaking Part 2: Cue Card Practice Book (DOCX)",
+    description: "A Word Document workbook compiling several high-yield IELTS Speaking Part 2 cue cards and vocabulary cheats.",
+    category: "part2",
+    categoryLabel: "IELTS Part 2",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/part 2 speaking.docx",
+    pages: 25,
+    downloads: 1350
   }
 ];
 
