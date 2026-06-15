@@ -315,6 +315,160 @@ const PDF_CATALOG = [
     pdfUrl: "pdf/part 2 speaking.docx",
     pages: 25,
     downloads: 1350
+  },
+  {
+    id: 29,
+    title: "IELTS Speaking Part 1: Art & Galleries",
+    description: "Master key vocabulary and structures to describe paintings, art exhibitions, and your personal artistic preferences.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – ART.pdf",
+    pages: 14,
+    downloads: 650
+  },
+  {
+    id: 30,
+    title: "IELTS Speaking Part 1: Daily Routine & Habits",
+    description: "Useful phrases, idioms, and natural expressions to talk about your morning schedule, daily routines, and lifestyle.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – DAILY ROUTINE.pdf",
+    pages: 15,
+    downloads: 920
+  },
+  {
+    id: 31,
+    title: "IELTS Speaking Part 1: Evening Time & Relaxation",
+    description: "Learn vocabulary and expressions to describe how you spend your evenings, wind down, and relax after school or work.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – EVENING TIME.pdf",
+    pages: 12,
+    downloads: 740
+  },
+  {
+    id: 32,
+    title: "IELTS Speaking Part 1: Food & Eating Habits",
+    description: "A complete guide to describing diets, favorite meals, cooking habits, and local food culture with advanced vocabulary.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – FOOD.pdf",
+    pages: 15,
+    downloads: 1040
+  },
+  {
+    id: 33,
+    title: "IELTS Speaking Part 1: Friends & University Life",
+    description: "Speak fluently about making friends, studying at university, and social interactions with classmate-themed idioms.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – FRIENDS AT UNIVERSITY.pdf",
+    pages: 14,
+    downloads: 890
+  },
+  {
+    id: 34,
+    title: "IELTS Speaking Part 1: Holidays & Travel Preferences",
+    description: "Learn advanced vocabulary, collocations, and answers to talk about vacation destinations, travel habits, and tourist spots.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – HOLIDAYS.pdf",
+    pages: 16,
+    downloads: 1240
+  },
+  {
+    id: 35,
+    title: "IELTS Speaking Part 1: Hometown & Local Attractions",
+    description: "Essential vocabulary guide and templates to answer IELTS Speaking hometown questions with high band scores.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – HOMETOWN.pdf",
+    pages: 15,
+    downloads: 1450
+  },
+  {
+    id: 36,
+    title: "IELTS Speaking Part 1: Memory & Forgetfulness",
+    description: "How to talk about short-term and long-term memory, memorizing techniques, and times when you forgot something.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – MEMORY.pdf",
+    pages: 14,
+    downloads: 760
+  },
+  {
+    id: 37,
+    title: "IELTS Speaking Part 1: Outer Space & Stars",
+    description: "Sleek vocabulary and answers about stargazing, astronomy, space travel, and your interest in science fiction.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – OUTER SPACE & STARS.pdf",
+    pages: 15,
+    downloads: 830
+  },
+  {
+    id: 38,
+    title: "IELTS Speaking Part 1: Science & Technology",
+    description: "Discuss the importance of science, your high school science classes, and how scientific discoveries affect daily life.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – SCIENCE.pdf",
+    pages: 12,
+    downloads: 910
+  },
+  {
+    id: 39,
+    title: "IELTS Speaking Part 1: Sports Teams & Teamwork",
+    description: "Useful phrases, idioms, and responses about playing team sports, spectator sports, and values of working together.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – SPORTS TEAMS.pdf",
+    pages: 14,
+    downloads: 680
+  },
+  {
+    id: 40,
+    title: "IELTS Speaking Part 1: Trees & Nature",
+    description: "Speak fluently about national parks, planting trees, and importance of forest conservation in speaking tests.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – TREES.pdf",
+    pages: 12,
+    downloads: 640
+  },
+  {
+    id: 41,
+    title: "IELTS Speaking Part 1: Weekend Activities",
+    description: "Structured templates to discuss weekend plans, leisure activities, and how you relax at the end of the week.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – WEEKEND.pdf",
+    pages: 14,
+    downloads: 1150
+  },
+  {
+    id: 42,
+    title: "IELTS Speaking Part 1: Old Buildings & Architecture",
+    description: "Vocabulary, idioms, and high-scoring sample answers to talk about old buildings, historic landmarks, and architectural heritage.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – OLD BUILDINGS.pdf",
+    pages: 3,
+    downloads: 850
   }
 ];
 
