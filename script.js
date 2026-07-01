@@ -469,6 +469,116 @@ const PDF_CATALOG = [
     pdfUrl: "pdf/IELTS SPEAKING PART 1 – OLD BUILDINGS.pdf",
     pages: 3,
     downloads: 850
+  },
+  {
+    id: 43,
+    title: "IELTS Speaking Part 1: Being Hurt & Injuries",
+    description: "Master expressions, phrasal verbs, and sample answers to speak fluently about accident experiences, minor injuries, and recovery.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – BEING HURT INJURIES.pdf",
+    pages: 3,
+    downloads: 720
+  },
+  {
+    id: 44,
+    title: "IELTS Speaking Part 1: Dealing with a Broken Heart",
+    description: "Useful vocabulary, idioms, and responses for speaking about emotional setbacks, relationships, and coping with heartbreak.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – BROKEN HEART.pdf",
+    pages: 3,
+    downloads: 830
+  },
+  {
+    id: 45,
+    title: "IELTS Speaking Part 1: Don't Give Up",
+    description: "Learn motivational idioms, phrases, and model answers about perseverance, overcoming difficulties, and staying focused.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – DON'T GIVE UP .pdf",
+    pages: 3,
+    downloads: 910
+  },
+  {
+    id: 46,
+    title: "IELTS Speaking Part 1: Education & Schooling",
+    description: "Comprehensive guide to school systems, university choices, favorite subjects, and classroom experiences for the IELTS exam.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – EDUCATION.pdf",
+    pages: 3,
+    downloads: 1050
+  },
+  {
+    id: 47,
+    title: "IELTS Speaking Part 1: Feeling Sad & Low Moods",
+    description: "Learn appropriate collocations, metaphors, and native speaker answers to describe sad emotions and low points in life.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – FEELING SAD.pdf",
+    pages: 3,
+    downloads: 680
+  },
+  {
+    id: 48,
+    title: "IELTS Speaking Part 1: Getting Better Every Day",
+    description: "A foundational speaking guide tailored for A2-B1 levels to describe daily progress, self-improvement, and learning habits.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – GET BETTER EVERY DAY (A2-B1).pdf",
+    pages: 3,
+    downloads: 980
+  },
+  {
+    id: 49,
+    title: "IELTS Speaking Part 1: Using Headphones",
+    description: "Model answers and vocabulary to discuss listening habits, headphones preferences, and situations when you use them.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – HEADPHONES.pdf",
+    pages: 3,
+    downloads: 740
+  },
+  {
+    id: 50,
+    title: "IELTS Speaking Part 1: Missing Someone",
+    description: "Express long-distance friendships, missing family members, and nostalgic memories with advanced collocations and vocabulary.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – MISSING SOMEONE.pdf",
+    pages: 3,
+    downloads: 820
+  },
+  {
+    id: 51,
+    title: "IELTS Speaking Part 1: Describing Nice Weather",
+    description: "Expand your responses about seasonal changes, perfect sunny days, and outdoor activities under nice weather.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – NICE WEATHER.pdf",
+    pages: 3,
+    downloads: 890
+  },
+  {
+    id: 52,
+    title: "IELTS Speaking Part 1: Rainy Days & Rain",
+    description: "Learn vocabulary, weather expressions, and model answers about rainy days, umbrellas, and what you do when it rains.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – RAIN .pdf",
+    pages: 3,
+    downloads: 760
   }
 ];
 
