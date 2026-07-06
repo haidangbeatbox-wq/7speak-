@@ -62,6 +62,7 @@
         <ul class="nav-menu" id="navMenu">
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#pdfs" class="nav-link">PDFs</a></li>
+          <li><a href="#centers" class="nav-link">TOEIC Centers</a></li>
           <li><a href="#categories" class="nav-link">Categories</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -195,6 +196,44 @@
 
     <!-- PDF Cards Grid (Dynamic JS injection target) -->
     <div class="library-grid" id="libraryGrid">
+      <!-- Content populated dynamically via script.js -->
+    </div>
+  </section>
+
+  <!-- 5.5 TOEIC CENTERS SECTION -->
+  <section class="section-container" id="centers">
+    <div class="library-header reveal">
+      <div>
+        <span class="section-subtitle">Kết nối học tập</span>
+        <h2 class="section-title">Trung tâm TOEIC Đối tác</h2>
+      </div>
+      <div class="center-actions">
+        <button id="registerCenterBtn" class="btn btn-primary btn-register-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width: 16px; height: 16px; margin-right: 8px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+          Đăng ký khóa học
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter & search toolbar for Centers -->
+    <div class="centers-toolbar reveal">
+      <div class="centers-search-box">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.637 10.637z" />
+        </svg>
+        <input type="text" id="centersSearchInput" placeholder="Tìm kiếm trung tâm hoặc khóa học...">
+      </div>
+      <div class="centers-filters">
+        <button class="center-filter-btn active" data-format="all">Tất cả</button>
+        <button class="center-filter-btn" data-format="online">Online</button>
+        <button class="center-filter-btn" data-format="offline">Offline</button>
+      </div>
+    </div>
+
+    <!-- Centers Cards Grid (Dynamic JS injection target) -->
+    <div class="centers-grid" id="centersGrid">
       <!-- Content populated dynamically via script.js -->
     </div>
   </section>
@@ -412,6 +451,72 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
     </svg>
   </button>
+
+  <!-- REGISTER CENTER MODAL -->
+  <div id="registerModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Đăng Ký Khóa Học TOEIC</h3>
+        <button id="closeModalBtn" class="modal-close-btn" aria-label="Đóng cửa sổ">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <form id="registerCenterForm" class="modal-form">
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="centerName">Tên Trung tâm Anh ngữ *</label>
+            <input type="text" id="centerName" required placeholder="Ví dụ: Anh Ngữ 7Speak Master">
+          </div>
+          <div class="form-group">
+            <label for="representative">Người đại diện liên hệ *</label>
+            <input type="text" id="representative" required placeholder="Ví dụ: Nguyễn Văn A">
+          </div>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="contactInfo">Số điện thoại / Email liên hệ *</label>
+            <input type="text" id="contactInfo" required placeholder="Ví dụ: 0901234567 hoặc a@center.com">
+          </div>
+          <div class="form-group">
+            <label for="courseTitle">Tên khóa học đăng tin *</label>
+            <input type="text" id="courseTitle" required placeholder="Ví dụ: TOEIC 650+ Cam Kết Đầu Ra">
+          </div>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="coursePrice">Học phí công bố *</label>
+            <input type="text" id="coursePrice" required placeholder="Ví dụ: 3.500.000đ / khóa">
+          </div>
+          <div class="form-group">
+            <label for="learningFormat">Hình thức học *</label>
+            <select id="learningFormat" required>
+              <option value="Online">Online (Học trực tuyến qua Zoom/Meet)</option>
+              <option value="Offline">Offline (Học trực tiếp tại cơ sở)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" id="addressGroup">
+          <label for="centerAddress">Địa điểm / Địa chỉ cơ sở *</label>
+          <input type="text" id="centerAddress" placeholder="Ví dụ: 123 Đường Ba Tháng Hai, Quận 10, TP.HCM">
+        </div>
+
+        <div class="form-group">
+          <label for="courseHighlights">Điểm nổi bật của khóa học *</label>
+          <textarea id="courseHighlights" rows="3" required placeholder="Ví dụ: Cam kết đầu ra bằng văn bản, Tặng giáo trình bản quyền, Giảng viên 990 TOEIC trực tiếp đứng lớp..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="cancelRegisterBtn" class="btn btn-secondary">Hủy bỏ</button>
+          <button type="submit" class="btn btn-primary">Gửi đăng ký</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
 </body>
 </html>

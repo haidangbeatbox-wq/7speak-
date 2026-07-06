@@ -582,9 +582,60 @@ const PDF_CATALOG = [
   }
 ];
 
+// 1.5 MOCK CENTERS DATA
+const CENTERS_DATA = [
+  {
+    id: 1,
+    name: "Anh Ngữ 7Speak Academy",
+    rating: 5,
+    format: "online",
+    formatLabel: "Online",
+    courseTitle: "TOEIC Bứt Phá 650+ Cam Kết",
+    price: "3.200.000đ / Khóa",
+    address: "Học trực tuyến qua Zoom (Có record bài giảng)",
+    features: [
+      "Cam kết đầu ra bằng văn bản tăng điểm từ 200+",
+      "Tặng kho tài liệu luyện đề độc quyền 7Speak",
+      "Giảng viên 980+ TOEIC trực tiếp đứng lớp sửa lỗi"
+    ]
+  },
+  {
+    id: 2,
+    name: "Hệ thống Anh Ngữ TOEIC Master",
+    rating: 4.8,
+    format: "offline",
+    formatLabel: "Offline",
+    courseTitle: "Luyện thi TOEIC Target 800+",
+    price: "4.800.000đ / 3 tháng",
+    address: "354 Đường Ba Tháng Hai, Quận 10, TP.HCM",
+    features: [
+      "Học trực tiếp tại cơ sở Quận 10 hiện đại",
+      "Thi thử chuẩn format IIG miễn phí hàng tuần",
+      "Trợ giảng kèm 1-1 các buổi tối ngoài giờ học"
+    ]
+  },
+  {
+    id: 3,
+    name: "Trung Tâm Ngoại Ngữ Global English",
+    rating: 4.7,
+    format: "offline",
+    formatLabel: "Offline",
+    courseTitle: "TOEIC Căn Bản Cho Người Mất Gốc",
+    price: "2.900.000đ / Khóa",
+    address: "78 Lê Lợi, Quận Hải Châu, Đà Nẵng",
+    features: [
+      "Thiết kế riêng cho người mất gốc lấy lại căn bản",
+      "Học offline kết hợp hệ thống bài tập online AI",
+      "Sĩ số lớp giới hạn dưới 15 học viên để tương tác"
+    ]
+  }
+];
+
 // State variables
 let currentCategory = "all";
 let searchQuery = "";
+let currentCenterFormat = "all";
+let centersSearchQuery = "";
 
 // 2. INITIALIZE THE THEME ENGINE (DARK/LIGHT SYSTEM)
 function initTheme() {
@@ -914,5 +965,314 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(`User downloaded: ${pdfItem.title}. New downloads: ${pdfItem.downloads}`);
       }
     }
+  });
+
+  // ==========================================
+  // J. TOEIC CENTERS DIRECTORY & REGISTRATION
+  // ==========================================
+  const centersGrid = document.getElementById("centersGrid");
+  const centersSearchInput = document.getElementById("centersSearchInput");
+  const centerFilterBtns = document.querySelectorAll(".center-filter-btn");
+  
+  const registerCenterBtn = document.getElementById("registerCenterBtn");
+  const registerModal = document.getElementById("registerModal");
+  const closeModalBtn = document.getElementById("closeModalBtn");
+  const cancelRegisterBtn = document.getElementById("cancelRegisterBtn");
+  const registerCenterForm = document.getElementById("registerCenterForm");
+  const learningFormatSelect = document.getElementById("learningFormat");
+  const addressGroup = document.getElementById("addressGroup");
+
+  // Initial render of Centers
+  renderCenters();
+
+  // Helper to load user centers from LocalStorage
+  function getUserCenters() {
+    const stored = localStorage.getItem("user_toeic_centers");
+    return stored ? JSON.parse(stored) : [];
+  }
+
+  // Helper to save a user center to LocalStorage
+  function saveUserCenter(center) {
+    const userCenters = getUserCenters();
+    userCenters.push(center);
+    localStorage.setItem("user_toeic_centers", JSON.stringify(userCenters));
+  }
+
+  // Dynamic Centers Rendering Engine
+  function renderCenters() {
+    if (!centersGrid) return;
+
+    const allCenters = [...CENTERS_DATA, ...getUserCenters()];
+
+    // Filter centers by search query and format
+    const filteredCenters = allCenters.filter(center => {
+      const matchesFormat = currentCenterFormat === "all" || center.format === currentCenterFormat;
+      const matchesSearch = center.name.toLowerCase().includes(centersSearchQuery) ||
+                            center.courseTitle.toLowerCase().includes(centersSearchQuery) ||
+                            center.address.toLowerCase().includes(centersSearchQuery) ||
+                            center.features.some(f => f.toLowerCase().includes(centersSearchQuery));
+      return matchesFormat && matchesSearch;
+    });
+
+    // Clear grid
+    centersGrid.innerHTML = "";
+
+    if (filteredCenters.length === 0) {
+      centersGrid.innerHTML = `
+        <div class="empty-library reveal active" style="grid-column: 1 / -1; min-height: 250px;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253" />
+          </svg>
+          <h3>Không tìm thấy trung tâm phù hợp</h3>
+          <p>Thử nhập từ khóa khác hoặc chuyển sang hình thức học khác.</p>
+        </div>
+      `;
+      return;
+    }
+
+    // Append center cards
+    filteredCenters.forEach(center => {
+      const card = document.createElement("article");
+      card.className = "center-card reveal";
+
+      // Rating stars generation
+      let starsHtml = "";
+      const rating = center.rating;
+      for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+          starsHtml += `
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 16px; height: 16px;">
+              <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+            </svg>`;
+        } else {
+          starsHtml += `
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 16px; height: 16px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499c-.195-.556-1.012-.556-1.207 0L8.03 8.356c-.073.204-.265.343-.483.35l-5.18.414c-.604.048-.847.788-.38 1.21l3.82 3.454a.488.488 0 01.137.423l-1.02 5.084c-.11.55.45.966.938.689l4.576-2.518a.488.488 0 01.485 0l4.577 2.518c.488.277 1.047-.138.938-.69l-1.02-5.084a.488.488 0 01.137-.422l3.82-3.455c.467-.422.224-1.162-.38-1.21l-5.18-.414a.488.488 0 01-.482-.35l-2.24-4.857z" />
+            </svg>`;
+        }
+      }
+
+      // Feature items list
+      let featuresHtml = "";
+      center.features.forEach(feat => {
+        featuresHtml += `
+          <li class="center-feature-li">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>${feat}</span>
+          </li>`;
+      });
+
+      // Address section (if offline/has address)
+      let addressHtml = "";
+      if (center.address) {
+        addressHtml = `
+          <div class="center-address">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+            <span>${center.address}</span>
+          </div>`;
+      }
+
+      card.innerHTML = `
+        <span class="center-badge ${center.format}">${center.formatLabel}</span>
+        <div class="center-card-header">
+          <div class="center-logo-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="center-logo-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.33l-7.5-5-7.5 5V21m16.5 0H3.75" />
+            </svg>
+          </div>
+          <div class="center-meta">
+            <h3 class="center-name">${center.name}</h3>
+            <div class="center-rating" title="Đánh giá: ${center.rating}/5 sao">
+              ${starsHtml}
+              <span style="font-size: 0.8rem; color: var(--text-secondary); margin-left: 4px; font-weight: 600;">${center.rating}</span>
+            </div>
+          </div>
+        </div>
+        <div class="center-course-info">
+          <h4 class="center-course-title">${center.courseTitle}</h4>
+          <div class="center-price-row">
+            <span class="center-price-label">Học phí:</span>
+            <span class="center-price-value">${center.price}</span>
+          </div>
+          ${addressHtml}
+        </div>
+        <ul class="center-features">
+          ${featuresHtml}
+        </ul>
+      `;
+
+      centersGrid.appendChild(card);
+    });
+
+    triggerScrollReveals();
+  }
+
+  // Live Search for Centers
+  if (centersSearchInput) {
+    centersSearchInput.addEventListener("input", (e) => {
+      centersSearchQuery = e.target.value.toLowerCase().trim();
+      renderCenters();
+    });
+  }
+
+  // Filter Format for Centers
+  centerFilterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      centerFilterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentCenterFormat = btn.dataset.format;
+      renderCenters();
+    });
+  });
+
+  // Modal Open/Close Event Handlers
+  if (registerCenterBtn && registerModal) {
+    registerCenterBtn.addEventListener("click", () => {
+      registerModal.classList.add("open");
+      document.body.style.overflow = "hidden"; // Prevent background scroll
+    });
+  }
+
+  function hideRegisterModal() {
+    if (registerModal) {
+      registerModal.classList.remove("open");
+      document.body.style.overflow = ""; // Enable background scroll
+      if (registerCenterForm) registerCenterForm.reset();
+      if (addressGroup) addressGroup.style.display = ""; // Reset address group display
+    }
+  }
+
+  if (closeModalBtn) closeModalBtn.addEventListener("click", hideRegisterModal);
+  if (cancelRegisterBtn) cancelRegisterBtn.addEventListener("click", hideRegisterModal);
+
+  // Close modal when clicking on overlay background
+  if (registerModal) {
+    registerModal.addEventListener("click", (e) => {
+      if (e.target === registerModal) {
+        hideRegisterModal();
+      }
+    });
+  }
+
+  // Dynamically show/hide Address field based on format select
+  if (learningFormatSelect && addressGroup) {
+    learningFormatSelect.addEventListener("change", (e) => {
+      if (e.target.value === "Online") {
+        addressGroup.style.display = "none";
+        document.getElementById("centerAddress").removeAttribute("required");
+      } else {
+        addressGroup.style.display = "block";
+        document.getElementById("centerAddress").setAttribute("required", "required");
+      }
+    });
+  }
+
+  // Form Submission Handler (Processing, validation, and storage saving)
+  if (registerCenterForm) {
+    registerCenterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const submitBtn = registerCenterForm.querySelector("button[type='submit']");
+      const originalText = submitBtn.innerHTML;
+
+      // Extract Form values
+      const cName = document.getElementById("centerName").value.trim();
+      const rep = document.getElementById("representative").value.trim();
+      const contact = document.getElementById("contactInfo").value.trim();
+      const title = document.getElementById("courseTitle").value.trim();
+      const price = document.getElementById("coursePrice").value.trim();
+      const format = learningFormatSelect.value.toLowerCase();
+      const formatLabel = learningFormatSelect.value;
+      const rawHighlights = document.getElementById("courseHighlights").value.trim();
+      
+      let address = "Học trực tuyến qua Zoom / Meet";
+      if (learningFormatSelect.value === "Offline") {
+        address = document.getElementById("centerAddress").value.trim();
+      }
+
+      // Convert text highlights list to array items
+      const features = rawHighlights.split("\n").map(f => f.trim()).filter(f => f.length > 0);
+      if (features.length === 0) {
+        features.push("Khóa học chất lượng cao, giáo án bài bản");
+      }
+
+      // Create new center object
+      const newCenter = {
+        id: Date.now(), // Unique ID
+        name: cName,
+        rating: 5.0, // default rating for newly submitted centers
+        format: format,
+        formatLabel: formatLabel,
+        courseTitle: title,
+        price: price,
+        address: address,
+        features: features
+      };
+
+      // Visual feedback loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg class="animate-spin" style="animation: spin 1s linear infinite; width: 18px; height: 18px; margin-right: 8px; display: inline-block; vertical-align: middle;" fill="none" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" style="opacity: 0.25;"></circle>
+          <path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" style="opacity: 0.75;"></path>
+        </svg>
+        Đang gửi tin...
+      `;
+
+      // Mock database insertion latency
+      setTimeout(() => {
+        // Save to LocalStorage
+        saveUserCenter(newCenter);
+
+        // Update list visually
+        renderCenters();
+
+        // Success state visual indicators
+        submitBtn.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 18px; height: 18px; margin-right: 8px; display: inline-block; vertical-align: middle;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          Thành công!
+        `;
+        submitBtn.style.background = "linear-gradient(135deg, #10B981 0%, #059669 100%)";
+
+        // Delay closing to let success state be seen
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+          submitBtn.style.background = "";
+          hideRegisterModal();
+          
+          // Toast or simple notification
+          alert(`Đăng ký khóa học "${title}" thành công!\nThông tin đã được lưu trữ trên LocalStorage của máy này. Khóa học của bạn đã được hiển thị trên bảng tin.`);
+        }, 1000);
+      }, 1500);
+    });
+  }
+
+  // Smooth scroll logic for the new #centers nav link
+  document.querySelectorAll('a[href^="#centers"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        const offset = 80; // height of header
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    });
   });
 });
