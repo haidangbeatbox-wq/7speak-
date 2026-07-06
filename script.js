@@ -968,41 +968,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ==========================================
-  // J. TOEIC CENTERS DIRECTORY & REGISTRATION
+  // J. TOEIC CENTERS DIRECTORY
   // ==========================================
   const centersGrid = document.getElementById("centersGrid");
   const centersSearchInput = document.getElementById("centersSearchInput");
   const centerFilterBtns = document.querySelectorAll(".center-filter-btn");
-  
-  const registerCenterBtn = document.getElementById("registerCenterBtn");
-  const registerModal = document.getElementById("registerModal");
-  const closeModalBtn = document.getElementById("closeModalBtn");
-  const cancelRegisterBtn = document.getElementById("cancelRegisterBtn");
-  const registerCenterForm = document.getElementById("registerCenterForm");
-  const learningFormatSelect = document.getElementById("learningFormat");
-  const addressGroup = document.getElementById("addressGroup");
 
   // Initial render of Centers
   renderCenters();
-
-  // Helper to load user centers from LocalStorage
-  function getUserCenters() {
-    const stored = localStorage.getItem("user_toeic_centers");
-    return stored ? JSON.parse(stored) : [];
-  }
-
-  // Helper to save a user center to LocalStorage
-  function saveUserCenter(center) {
-    const userCenters = getUserCenters();
-    userCenters.push(center);
-    localStorage.setItem("user_toeic_centers", JSON.stringify(userCenters));
-  }
 
   // Dynamic Centers Rendering Engine
   function renderCenters() {
     if (!centersGrid) return;
 
-    const allCenters = [...CENTERS_DATA, ...getUserCenters()];
+    const allCenters = CENTERS_DATA;
 
     // Filter centers by search query and format
     const filteredCenters = allCenters.filter(center => {
@@ -1129,131 +1108,6 @@ document.addEventListener("DOMContentLoaded", () => {
       renderCenters();
     });
   });
-
-  // Modal Open/Close Event Handlers
-  if (registerCenterBtn && registerModal) {
-    registerCenterBtn.addEventListener("click", () => {
-      registerModal.classList.add("open");
-      document.body.style.overflow = "hidden"; // Prevent background scroll
-    });
-  }
-
-  function hideRegisterModal() {
-    if (registerModal) {
-      registerModal.classList.remove("open");
-      document.body.style.overflow = ""; // Enable background scroll
-      if (registerCenterForm) registerCenterForm.reset();
-      if (addressGroup) addressGroup.style.display = ""; // Reset address group display
-    }
-  }
-
-  if (closeModalBtn) closeModalBtn.addEventListener("click", hideRegisterModal);
-  if (cancelRegisterBtn) cancelRegisterBtn.addEventListener("click", hideRegisterModal);
-
-  // Close modal when clicking on overlay background
-  if (registerModal) {
-    registerModal.addEventListener("click", (e) => {
-      if (e.target === registerModal) {
-        hideRegisterModal();
-      }
-    });
-  }
-
-  // Dynamically show/hide Address field based on format select
-  if (learningFormatSelect && addressGroup) {
-    learningFormatSelect.addEventListener("change", (e) => {
-      if (e.target.value === "Online") {
-        addressGroup.style.display = "none";
-        document.getElementById("centerAddress").removeAttribute("required");
-      } else {
-        addressGroup.style.display = "block";
-        document.getElementById("centerAddress").setAttribute("required", "required");
-      }
-    });
-  }
-
-  // Form Submission Handler (Processing, validation, and storage saving)
-  if (registerCenterForm) {
-    registerCenterForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const submitBtn = registerCenterForm.querySelector("button[type='submit']");
-      const originalText = submitBtn.innerHTML;
-
-      // Extract Form values
-      const cName = document.getElementById("centerName").value.trim();
-      const rep = document.getElementById("representative").value.trim();
-      const contact = document.getElementById("contactInfo").value.trim();
-      const title = document.getElementById("courseTitle").value.trim();
-      const price = document.getElementById("coursePrice").value.trim();
-      const format = learningFormatSelect.value.toLowerCase();
-      const formatLabel = learningFormatSelect.value;
-      const rawHighlights = document.getElementById("courseHighlights").value.trim();
-      
-      let address = "Học trực tuyến qua Zoom / Meet";
-      if (learningFormatSelect.value === "Offline") {
-        address = document.getElementById("centerAddress").value.trim();
-      }
-
-      // Convert text highlights list to array items
-      const features = rawHighlights.split("\n").map(f => f.trim()).filter(f => f.length > 0);
-      if (features.length === 0) {
-        features.push("Khóa học chất lượng cao, giáo án bài bản");
-      }
-
-      // Create new center object
-      const newCenter = {
-        id: Date.now(), // Unique ID
-        name: cName,
-        rating: 5.0, // default rating for newly submitted centers
-        format: format,
-        formatLabel: formatLabel,
-        courseTitle: title,
-        price: price,
-        address: address,
-        features: features
-      };
-
-      // Visual feedback loading state
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = `
-        <svg class="animate-spin" style="animation: spin 1s linear infinite; width: 18px; height: 18px; margin-right: 8px; display: inline-block; vertical-align: middle;" fill="none" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" style="opacity: 0.25;"></circle>
-          <path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" style="opacity: 0.75;"></path>
-        </svg>
-        Đang gửi tin...
-      `;
-
-      // Mock database insertion latency
-      setTimeout(() => {
-        // Save to LocalStorage
-        saveUserCenter(newCenter);
-
-        // Update list visually
-        renderCenters();
-
-        // Success state visual indicators
-        submitBtn.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 18px; height: 18px; margin-right: 8px; display: inline-block; vertical-align: middle;">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-          </svg>
-          Thành công!
-        `;
-        submitBtn.style.background = "linear-gradient(135deg, #10B981 0%, #059669 100%)";
-
-        // Delay closing to let success state be seen
-        setTimeout(() => {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalText;
-          submitBtn.style.background = "";
-          hideRegisterModal();
-          
-          // Toast or simple notification
-          alert(`Đăng ký khóa học "${title}" thành công!\nThông tin đã được lưu trữ trên LocalStorage của máy này. Khóa học của bạn đã được hiển thị trên bảng tin.`);
-        }, 1000);
-      }, 1500);
-    });
-  }
 
   // Smooth scroll logic for the new #centers nav link
   document.querySelectorAll('a[href^="#centers"]').forEach(anchor => {
