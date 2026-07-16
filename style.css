@@ -1591,6 +1591,28 @@ footer {
 }
 
 /* -------------------------------------------------------------
+ * Load More Button Styling
+ * ------------------------------------------------------------- */
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+#loadMoreBtn {
+  padding: 0.9rem 2.5rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+}
+
+#loadMoreBtn:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
+}
+
+/* -------------------------------------------------------------
  * Additional Media Queries for TOEIC Center section
  * ------------------------------------------------------------- */
 @media (max-width: 768px) {

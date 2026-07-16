@@ -636,6 +636,7 @@ let currentCategory = "all";
 let searchQuery = "";
 let currentCenterFormat = "all";
 let centersSearchQuery = "";
+let displayedCount = 9;
 
 // 2. INITIALIZE THE THEME ENGINE (DARK/LIGHT SYSTEM)
 function initTheme() {
@@ -722,6 +723,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
       searchQuery = e.target.value.toLowerCase().trim();
+      displayedCount = 9; // Reset pagination count on search input
       renderLibrary();
     });
   }
@@ -736,6 +738,7 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.add("active");
       
       currentCategory = category;
+      displayedCount = 9; // Reset pagination count on category change
       renderLibrary();
       
       // Smooth scroll back to library view context
@@ -753,6 +756,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Load More Button Event Handler
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener("click", () => {
+      displayedCount += 9; // Increase displayed card limit by 9
+      renderLibrary();
+    });
+  }
+
   // E. Dynamic Rendering Engine
   function renderLibrary() {
     if (!libraryGrid) return;
@@ -765,9 +777,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             pdf.categoryLabel.toLowerCase().includes(searchQuery);
       return matchesCategory && matchesSearch;
     });
-
-    // Update result counters
-    if (docCount) docCount.textContent = filteredPDFs.length;
 
     // Clear existing children
     libraryGrid.innerHTML = "";
@@ -783,11 +792,23 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>We couldn't find anything matching "${searchQuery}". Try modifying your search or select another category.</p>
         </div>
       `;
+      // Hide load more button container on empty result
+      const loadMoreContainer = document.getElementById("loadMoreContainer");
+      if (loadMoreContainer) loadMoreContainer.style.display = "none";
+      if (docCount) docCount.textContent = "0";
+      if (totalCount) totalCount.textContent = "0";
       return;
     }
 
+    // Slice for pagination/load more
+    const itemsToRender = filteredPDFs.slice(0, displayedCount);
+
+    // Update result counters dynamically
+    if (docCount) docCount.textContent = itemsToRender.length;
+    if (totalCount) totalCount.textContent = filteredPDFs.length;
+
     // Append dynamic cards
-    filteredPDFs.forEach(pdf => {
+    itemsToRender.forEach(pdf => {
       const card = document.createElement("article");
       card.className = "pdf-card reveal";
       
@@ -825,6 +846,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       libraryGrid.appendChild(card);
     });
+
+    // Toggle Load More button visibility
+    const loadMoreContainer = document.getElementById("loadMoreContainer");
+    if (loadMoreContainer) {
+      if (filteredPDFs.length > displayedCount) {
+        loadMoreContainer.style.display = "flex";
+      } else {
+        loadMoreContainer.style.display = "none";
+      }
+    }
 
     // Lazy load observer registration
     initLazyLoading();
