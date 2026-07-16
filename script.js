@@ -667,7 +667,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.getElementById("navMenu");
   const navLinks = document.querySelectorAll(".nav-link");
   const searchInput = document.getElementById("searchInput");
-  const categoryCards = document.querySelectorAll(".category-card");
   const libraryGrid = document.getElementById("libraryGrid");
   const docCount = document.getElementById("docCount");
   const totalCount = document.getElementById("totalCount");
@@ -728,33 +727,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // D. Category Filters
-  categoryCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const category = card.dataset.category;
-      
-      // Set active layout states
-      categoryCards.forEach(c => c.classList.remove("active"));
-      card.classList.add("active");
-      
-      currentCategory = category;
-      displayedCount = 9; // Reset pagination count on category change
-      renderLibrary();
-      
-      // Smooth scroll back to library view context
-      const librarySection = document.getElementById("pdfs");
-      if (librarySection) {
-        const offset = 80; // height of header
-        const elementPosition = librarySection.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
-        
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-      }
-    });
-  });
+
 
   // Load More Button Event Handler
   const loadMoreBtn = document.getElementById("loadMoreBtn");
