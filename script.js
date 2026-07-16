@@ -579,6 +579,226 @@ const PDF_CATALOG = [
     pdfUrl: "pdf/IELTS SPEAKING PART 1 – RAIN .pdf",
     pages: 3,
     downloads: 760
+  },
+  {
+    id: 53,
+    title: "English Vocabulary: Staircase & Building Architecture",
+    description: "Learn useful vocabulary, verbs, and prepositional phrases related to staircases, ladders, lifts, and building infrastructure.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/CẦU THANG.pdf",
+    pages: 10,
+    downloads: 920
+  },
+  {
+    id: 54,
+    title: "IELTS Speaking: The Importance of Drinking Enough Water",
+    description: "A comprehensive guide with vocabulary, discussion questions, and model answers about hydration and daily health habits.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING -DRINKING ENOUGH WATER.pdf",
+    pages: 8,
+    downloads: 1140
+  },
+  {
+    id: 55,
+    title: "IELTS Speaking Part 1: Avoiding Stimulants & Coffee Habits",
+    description: "Useful vocabulary and responses for discussing caffeine intake, sleeping cycles, and daily energy levels.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – AVOIDING STIMULANTS.pdf",
+    pages: 12,
+    downloads: 1350
+  },
+  {
+    id: 56,
+    title: "IELTS Speaking Part 1: Bubble Tea & Popular Drinks",
+    description: "Discuss the popularity of milk tea, social gatherings, and food trends among youth with natural expressions.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – BUBBLE TEA (MILK TEA).pdf",
+    pages: 6,
+    downloads: 1680
+  },
+  {
+    id: 57,
+    title: "IELTS Speaking Part 1: Loving Someone & Relationships",
+    description: "Vocabulary, model answers, and idioms for describing feelings of affection, close friendships, and family love.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – LOVE SOMEONE.pdf",
+    pages: 14,
+    downloads: 1420
+  },
+  {
+    id: 58,
+    title: "IELTS Speaking Part 1: Worrying About the Future",
+    description: "Learn how to talk about career plans, uncertainties, stress, and optimism using advanced grammar structures.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING PART 1 – WORRYING ABOUT THE FUTURE.pdf",
+    pages: 11,
+    downloads: 1530
+  },
+  {
+    id: 59,
+    title: "IELTS Speaking: Describing Beautiful Memories",
+    description: "Phrasal verbs, idioms, and vocabulary to describe unforgettable life events, nostalgic moments, and childhood milestones.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING – BEAUTIFUL MEMORIES.pdf",
+    pages: 15,
+    downloads: 1890
+  },
+  {
+    id: 60,
+    title: "IELTS Speaking: The Benefits of Going to Bed Early",
+    description: "Sample dialogues, key phrases, and tips to discuss sleep hygiene, morning routines, and general well-being.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING – GOING TO BED EARLY.pdf",
+    pages: 9,
+    downloads: 1120
+  },
+  {
+    id: 61,
+    title: "IELTS Speaking: Regular Health Check-Ups",
+    description: "Vocabulary and structures for talking about medical checkups, preventive healthcare, and visiting doctors.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING – REGULAR HEALTH CHECK-UPS.pdf",
+    pages: 10,
+    downloads: 1045
+  },
+  {
+    id: 62,
+    title: "IELTS Speaking: Appreciating the Little Things in Life",
+    description: "Discuss mindfulness, finding happiness in daily routines, and expressing gratitude in natural English.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– APPRECIATING THE LITTLE THINGS IN LIFE.pdf",
+    pages: 13,
+    downloads: 1670
+  },
+  {
+    id: 63,
+    title: "IELTS Speaking: Exercising to Stay Healthy",
+    description: "Advanced collocations, vocabulary, and model responses for fitness activities, outdoor workouts, and health benefits.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– EXERCISING TO STAY HEALTHY.pdf",
+    pages: 12,
+    downloads: 1520
+  },
+  {
+    id: 64,
+    title: "IELTS Speaking: Family Comes First",
+    description: "Discussing family values, support systems, priorities, and close-knit relationships in standard English.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– FAMILY COMES FIRST.pdf",
+    pages: 14,
+    downloads: 1980
+  },
+  {
+    id: 65,
+    title: "IELTS Speaking: Feeling Stuck in Life & Career Advice",
+    description: "Vocabulary and idioms for describing moments of career stagnation, motivational slumps, and overcoming obstacles.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– FEELING STUCK IN LIFE.pdf",
+    pages: 10,
+    downloads: 1210
+  },
+  {
+    id: 66,
+    title: "IELTS Speaking: Hard Work is the Key to Success",
+    description: "Discuss the concepts of perseverance, diligence, career achievements, and personal motivation.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– HARD WORK IS THE KEY TO SUCCESS.pdf",
+    pages: 12,
+    downloads: 1750
+  },
+  {
+    id: 67,
+    title: "IELTS Speaking: Investing in Knowledge & Education",
+    description: "How to discuss the value of self-education, reading habits, online courses, and personal development.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– INVESTING IN KNOWLEDGE.pdf",
+    pages: 15,
+    downloads: 1490
+  },
+  {
+    id: 68,
+    title: "IELTS Speaking: Knowledge is Power",
+    description: "Useful phrases, idioms, and essays on the importance of learning, information technology, and intellectual curiosity.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– KNOWLEDGE IS POWER.pdf",
+    pages: 11,
+    downloads: 1360
+  },
+  {
+    id: 69,
+    title: "IELTS Speaking: Making an Effort Every Day",
+    description: "Collocations and expressions to describe consistency, daily study habits, discipline, and constant improvement.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– MAKING AN EFFORT EVERY DAY.pdf",
+    pages: 13,
+    downloads: 1840
+  },
+  {
+    id: 70,
+    title: "IELTS Speaking: Striving for a Better Future",
+    description: "Model answers and vocabulary about ambition, future plans, goals, and continuous self-improvement.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– STRIVING FOR A BETTER FUTURE.pdf",
+    pages: 10,
+    downloads: 1570
+  },
+  {
+    id: 71,
+    title: "English Vocabulary: Music & Instruments",
+    description: "Expand your vocabulary related to music genres, instruments, concerts, and how music affects your emotions.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/MUSIC ANH.pdf",
+    pages: 8,
+    downloads: 980
+  },
+  {
+    id: 72,
+    title: "IELTS Speaking: The Harmful Effects of Addictive Substances",
+    description: "Discuss public health, social issues, smoking habits, and alcohol consumption with formal collocations.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/THE HARMFUL EFFECTS OF ADDICTIVE SUBSTANCES.pdf",
+    pages: 16,
+    downloads: 1150
   }
 ];
 
