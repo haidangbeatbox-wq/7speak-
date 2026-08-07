@@ -799,6 +799,171 @@ const PDF_CATALOG = [
     pdfUrl: "pdf/THE HARMFUL EFFECTS OF ADDICTIVE SUBSTANCES.pdf",
     pages: 16,
     downloads: 1150
+  },
+  {
+    id: 73,
+    title: "English Practice: Believe in Your Own Efforts",
+    description: "Explore vocabulary and expressions about self-belief, dedication, personal growth, and overcoming obstacles in life.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/BELIEVE IN YOUR OWN EFFORTS.pdf",
+    pages: 8,
+    downloads: 1050
+  },
+  {
+    id: 74,
+    title: "Speaking Guide: Your Biological Clock",
+    description: "Learn how to discuss sleep patterns, circadian rhythms, daily energy levels, and maintaining a healthy biological schedule.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/BIOLOGICAL CLOCK.pdf",
+    pages: 10,
+    downloads: 950
+  },
+  {
+    id: 75,
+    title: "Healthy Living: Drink Enough Water",
+    description: "Useful phrases, collocations, and speaking prompts about the importance of daily hydration and maintaining health.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/DRINK ENOUGH WATER.pdf",
+    pages: 6,
+    downloads: 1120
+  },
+  {
+    id: 76,
+    title: "Speaking Topic: Protect the Environment",
+    description: "Master vocabulary and model answers for IELTS Speaking questions related to environmental protection, pollution, and recycling.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/ENVIRONMENT.pdf",
+    pages: 12,
+    downloads: 1430
+  },
+  {
+    id: 77,
+    title: "English Vocabulary: Farewell Party",
+    description: "Learn common expressions and dialogues used at goodbye parties, saying farewell to colleagues, and wishing them luck.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/FAREWELL PARTY.pdf",
+    pages: 8,
+    downloads: 880
+  },
+  {
+    id: 78,
+    title: "Speaking Topic: The Value of Fresh Air",
+    description: "Key expressions, vocabulary, and model responses about outdoor activities, nature, and the health benefits of fresh air.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/FRESH AIR.pdf",
+    pages: 7,
+    downloads: 990
+  },
+  {
+    id: 79,
+    title: "IELTS Speaking: Discussing Social Problems",
+    description: "Advanced collocations and structures to talk about societal issues, public challenges, and government solutions.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING – SOCIAL PROBLEMS.pdf",
+    pages: 14,
+    downloads: 1250
+  },
+  {
+    id: 80,
+    title: "IELTS Speaking: Overcoming a Difficult Beginning",
+    description: "Vocabulary and idioms to describe challenging starts, initial difficulties in projects, and how to stay persistent.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– A DIFFICULT BEGINNING.pdf",
+    pages: 10,
+    downloads: 1080
+  },
+  {
+    id: 81,
+    title: "IELTS Speaking: Describing Your Hometown",
+    description: "Detailed guide with model answers and vocabulary for describing your birth place, local landmarks, and community changes.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– HOMETOWN.pdf",
+    pages: 9,
+    downloads: 1520
+  },
+  {
+    id: 82,
+    title: "IELTS Speaking: Music is the Food for the Soul",
+    description: "Beautiful expressions, idioms, and phrases to describe your favorite songs, concert experiences, and the emotional impact of music.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/ielts.svg",
+    pdfUrl: "pdf/IELTS SPEAKING– MUSIC IS THE FOOD FOR THE SOUL.pdf",
+    pages: 11,
+    downloads: 1340
+  },
+  {
+    id: 83,
+    title: "Speaking Guide: Leisure Time & Hobbies",
+    description: "Common questions, phrasal verbs, and expressions related to how you spend your free time, relax, and pursue hobbies.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/LEISURE TIME.pdf",
+    pages: 8,
+    downloads: 1160
+  },
+  {
+    id: 84,
+    title: "Speaking Topic: Socializing at a Party",
+    description: "Learn idioms, vocabulary, and conversational structures for talking about celebration events, birthday parties, and gatherings.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/PARTY.pdf",
+    pages: 6,
+    downloads: 930
+  },
+  {
+    id: 85,
+    title: "Speaking Topic: Social Media Influence",
+    description: "Discuss the pros and cons of social media networking, digital communication habits, and online trends with natural expressions.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/SOCIAL MEDIA.pdf",
+    pages: 10,
+    downloads: 1290
+  },
+  {
+    id: 86,
+    title: "Speaking Topic: Modern Technology & Devices",
+    description: "Vocabulary, phrasal verbs, and model responses for discussing smart devices, internet development, and technological changes.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/TECHNOLOGY.pdf",
+    pages: 12,
+    downloads: 1410
+  },
+  {
+    id: 87,
+    title: "Speaking Guide: Climate & Weather",
+    description: "Learn weather idioms, vocabulary, and answers to discuss seasons, extreme weather conditions, and how climate affects daily activities.",
+    category: "part1",
+    categoryLabel: "IELTS Part 1",
+    coverUrl: "assets/covers/conversation.svg",
+    pdfUrl: "pdf/WEATHER.pdf",
+    pages: 9,
+    downloads: 1180
   }
 ];
 
